@@ -152,5 +152,16 @@ html {
 
 
 
+## Box sizing border box
+
+Quand on applique un padding sur une box, permet de ne pas modifier les dimensions initiales de la box.
+
+
+
+
+
+
+
+
 ## Liens utiles :
 * [Caniuse](https://caniuse.com/) : c'est compatible partout ou pas?
