@@ -249,17 +249,127 @@ Les media-queries sont des règles à appliquer pour changer le design d'un site
  </div>
  ```
 
- ## Javascript - ES6 
-
- ES6 a été pensé pour créer des applications web facilement maintenables, tout en restant compatibles avec le code existant. L'idée a été d'ajouter de nouvelles fonctionnalités au langage. Ainsi, la bibliothèque standard s’enrichit de nouvelles méthodes, mais surtout, le langage adopte de nouvelles syntaxes, comme les classes ou les modules (pour ne citer qu'eux) permettant d'avoir du code beaucoup plus structuré et lisible.
+ 
 
 
  ## Le canvas 
 
  Ajouté en HTML5, l'élément <canvas> est un nouvel élément qui peut être utilisé pour dessiner des graphismes via des scripts JavaScript. Par exemple, Il peut être utilisé pour dessiner des graphes, faire des compositions de photos, des animations, ou même faire du traitement ou de l'affichage de vidéos en temps réel.
 
+# Le Javascript 
 
 
+## Javascript - ES6 
+
+ ES6 a été pensé pour créer des applications web facilement maintenables, tout en restant compatibles avec le code existant. L'idée a été d'ajouter de nouvelles fonctionnalités au langage. Ainsi, la bibliothèque standard s’enrichit de nouvelles méthodes, mais surtout, le langage adopte de nouvelles syntaxes, comme les classes ou les modules (pour ne citer qu'eux) permettant d'avoir du code beaucoup plus structuré et lisible.
+
+ ## Qu'est-ce que le "document.querySelector" ?
+
+ La méthode querySelector() de l'interface Document retourne le premier Element dans le document correspondant au sélecteur - ou groupe de sélecteurs - spécifié(s), ou null si aucune correspondance n'est trouvée.
+
+ ```javascript
+ element = document.querySelector(sélecteurs);
+ var el = document.querySelector(".maclasse");
+ ```
+
+
+## Qu'est-ce que le "addEventListener" ? 
+
+* La méthode addEventListener() d'EventTarget met en place une fonction à appeler chaque fois que l'événement spécifié est remis à la cible. Les cibles courantes sont un Element, le Document lui-même et une Window, mais elle peut être tout objet prenant en charge les évènements (comme XMLHttpRequest).
+
+* AddEventListener() fonctionne par ajout d'une fonction ou d'un objet implémentant EventListener à la liste des écouteurs d'évènements pour un type d'évènement spécifié dans la EventTarget sur laquelle elle est appelée.
+
+```javascript
+var el = document.getElementById("outside");
+el.addEventListener("click", () => { modifyText("four"); }, false);
+```
+
+## Qu'est-ce que le "For"?
+
+L'instruction for crée une boucle composée de trois expressions optionnelles séparées par des points-virgules et encadrées entre des parenthèses qui sont suivies par une instruction (généralement une instruction de bloc) à exécuter dans la boucle.
+
+```javascript
+var str = "";
+
+for (var i = 0; i < 9; i++) {
+  str = str + i;
+}
+```
+
+## Qu'est-ce que le "While" ?
+
+
+L'instruction while permet de créer une boucle qui s'exécute tant qu'une condition de test est vérifiée. La condition est évaluée avant d'exécuter l'instruction contenue dans la boucle.
+
+```javascript
+var n = 0;
+
+while (n < 3) {
+  n++;
+}
+```
+
+### Qu'est-ce que le "Array"?
+
+L'objet global Array est utilisé pour créer des tableaux. Les tableaux sont des objets de haut-niveau (en termes de complexité homme-machine) semblables à des listes.
+
+* Crée un tableau 
+
+```javascript
+var fruits = ['Apple', 'Banana'];
+
+console.log(fruits.length);
+// 2
+```
+
+* Accéder (via son index) à un élément du tableau
+
+```javascript
+var first = fruits[0];
+// Apple
+
+var last = fruits[fruits.length - 1];
+// Banana
+```
+
+* Boucler sur un tableau
+
+```javascript
+fruits.forEach(function(item, index, array) {
+  console.log(item, index);
+});
+// Apple 0
+// Banana 1
+```
+
+* Ajouter à la fin du tableau
+
+```javascript
+var newLength = fruits.push('Orange');
+// ["Apple", "Banana", "Orange"]
+```
+
+* Ajouter au début du tableau
+
+```javascript
+var newLength = fruits.unshift('Strawberry') // ajoute au début
+// ["Strawberry", "Banana"];
+```
+
+* Supprimer le premier élément du tableau
+
+```javascript
+var first = fruits.shift(); // supprime Apple (au début)
+// ["Banana"];
+```
+
+* Supprimer le dernier élément du tableau
+
+```javascript
+
+var last = fruits.pop(); // supprime Orange (à la fin)
+// ["Apple", "Banana"];
+```
 
  ### Liens utiles :
 * [Caniuse](https://caniuse.com/) : c'est compatible partout ou pas?
