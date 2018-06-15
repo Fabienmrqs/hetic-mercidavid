@@ -158,7 +158,7 @@ ornements, des décorations... On peut bien entendu faire des animations avec, l
 Quand on applique un padding sur une box, permet de ne pas modifier les dimensions initiales de la box.
 
 
-### Keyframes animation 
+## Keyframes animation 
 
 ```css
 
@@ -180,7 +180,9 @@ Quand on applique un padding sur une box, permet de ne pas modifier les dimensio
 }
 ```
 
-### Media-Queries 
+La règle  @keyframes permet aux auteurs de définir les étapes qui composent la séquence d'une animation CSS. Cela permet de contrôler une animation plus finement que ce qu'on pourrait obtenir avec les transitions.
+
+## Media-Queries 
 
 ```css
 .class {
@@ -201,6 +203,62 @@ Quand on applique un padding sur une box, permet de ne pas modifier les dimensio
 ```
 
 Les media-queries sont des règles à appliquer pour changer le design d'un site en fonction des caractéristiques de l'écran ! Grâce à cette technique, nous pourrons créer un design qui s'adapte automatiquement à l'écran de chaque visiteur.
+
+## Flexbox Grid - Comment ça marche? :o
+
+* Flexbox Grid Permet de placer ces elements selon une grille de 12 colonnes , simplifie egalement le responsive avec des media queries deja defini (notamment pour le layout) avec des tailles differentes.
+
+* Pour commencer il faut placer une classe 'row' , tout les elements placer a l'interieur de la classe se mettront en display flex.
+
+```html
+ <div class='row'>
+
+ </div>
+ ```
+
+ * Ensuite pour placer mes elements on va placer les classes 'col-xs-12' où le 'xs' correspond au device et '12' le nombre de grille que mon element va prendre. Il y a quatre format de devices ==> col-xs col-sm col-md col-lg.
+
+ ```html
+  <div class='row'>
+    <div class='col-xs-12'>
+      <p>Hello</p>
+    </div>
+ </div>
+ ```
+
+ * On a egalement la possibilité de placer les elements en offset et d'utiliser des proprietes flex plus facilement en rajoutant des classes au row . Possibilité d'imbriquer mes classes.
+
+ ```html
+  <div class='row center-xs top-xs'>
+    <div class='col-xs-12 col-md-offset-4'>
+
+      <p>Hello</p>
+
+      <div class='row start-xs between-xs'>
+
+          <div class='col-xs-offset-1 col-lg-12'>
+
+                <p>Yo</p>
+
+                <p>Oy</p>
+
+          </div>
+      </div>
+
+    </div>
+ </div>
+ ```
+
+ ## Javascript - ES6 
+
+ ES6 a été pensé pour créer des applications web facilement maintenables, tout en restant compatibles avec le code existant. L'idée a été d'ajouter de nouvelles fonctionnalités au langage. Ainsi, la bibliothèque standard s’enrichit de nouvelles méthodes, mais surtout, le langage adopte de nouvelles syntaxes, comme les classes ou les modules (pour ne citer qu'eux) permettant d'avoir du code beaucoup plus structuré et lisible.
+
+
+ ## Le canvas 
+
+ Ajouté en HTML5, l'élément <canvas> est un nouvel élément qui peut être utilisé pour dessiner des graphismes via des scripts JavaScript. Par exemple, Il peut être utilisé pour dessiner des graphes, faire des compositions de photos, des animations, ou même faire du traitement ou de l'affichage de vidéos en temps réel.
+
+
 
 
  ### Liens utiles :
