@@ -128,7 +128,7 @@ ornements, des décorations... On peut bien entendu faire des animations avec, l
 
 ### REM
 
-* Le REM est basé sur la teille de la racine (soit la balise<html>) qui, par défaut a une valeur de 16px. Afind d'éviter tout calcul, il est nécessaire de l'écraser en donnant une base de 10px soit 62.5%.
+* Le REM est basé sur la taille de la racine (soit la balise<html>) qui, par défaut a une valeur de 16px. Afind d'éviter tout calcul, il est nécessaire de l'écraser en donnant une base de 10px soit 62.5%.
 * Le REM est intéressant à utiliser si les média-queries employées sont en rem également. Cela vous permettra de garder des proportions égales lorsqu'on va redimensionner la page.
 * Ses proportions seront également gardées quand l'utilisateur zoomera dans votre page.
 
@@ -156,6 +156,27 @@ html {
 
 Quand on applique un padding sur une box, permet de ne pas modifier les dimensions initiales de la box.
 
+
+### Keyframes animation 
+
+```css
+
+.blinking {
+   color: #93B7BE;
+   -webkit-animation: blinkAnimation 1s infinite;
+}
+
+@-webkit-keyframes blinkAnimation {
+   0% {
+      color: #93B7BE;
+   }
+   50% {
+      color: #000;
+   }
+   100% {
+      color: #93B7BE;
+   }
+}
 
 
 
