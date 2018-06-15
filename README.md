@@ -111,7 +111,7 @@ ornements, des décorations... On peut bien entendu faire des animations avec, l
 
 ## REM, EM, %, VW SIZING
 
-### %
+
 
 
 ### EM
@@ -125,6 +125,7 @@ ornements, des décorations... On peut bien entendu faire des animations avec, l
         font-size: .8em;
     }
 }
+```
 
 ### REM
 
@@ -132,8 +133,8 @@ ornements, des décorations... On peut bien entendu faire des animations avec, l
 * Le REM est intéressant à utiliser si les média-queries employées sont en rem également. Cela vous permettra de garder des proportions égales lorsqu'on va redimensionner la page.
 * Ses proportions seront également gardées quand l'utilisateur zoomera dans votre page.
 
-```css 
-html {
+
+```css {
     font-size: 62.5%;
 
 }
@@ -177,12 +178,30 @@ Quand on applique un padding sur une box, permet de ne pas modifier les dimensio
       color: #93B7BE;
    }
 }
+```
+
+### Media-Queries 
+
+```css
+.class {
+  background:red;
+}
+
+@media (min-width: 768px) {
+  .class{
+    background:blue;
+  }
+}
+
+@media (min-width: 1024px) {
+  .class{
+    background:yellow;
+  }
+}
+```
+
+Les media-queries sont des règles à appliquer pour changer le design d'un site en fonction des caractéristiques de l'écran ! Grâce à cette technique, nous pourrons créer un design qui s'adapte automatiquement à l'écran de chaque visiteur.
 
 
-
-
-
-
-
-## Liens utiles :
+ ### Liens utiles :
 * [Caniuse](https://caniuse.com/) : c'est compatible partout ou pas?
